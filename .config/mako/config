@@ -1,0 +1,17 @@
+background-color=#1e1e1e
+text-color=#999999
+border-color=#414141
+border-size=2
+border-radius=0
+default-timeout=4000
+margin=5
+font=Ubuntu Nerd Font 10
+anchor=top-right
+[urgency=low]
+border-color=#282a36
+
+[urgency=normal]
+border-color=#f1fa8c
+
+[urgency=high]
+border-color=#ff5555

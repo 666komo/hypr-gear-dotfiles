@@ -1,0 +1,130 @@
+// WAYBAR
+
+{
+	"height": 30, 
+	"spacing": 4, 
+	"modules-left": [
+		"clock",
+		"hyprland/workspaces"
+],
+
+	"modules-center": [
+		"custom/playerctl"
+],
+
+	"modules-right": [
+		"network",
+		"pulseaudio",
+		"backlight",
+		"battery",
+		"custom/baraction",
+		"custom/powermenu"
+
+],
+    
+	"hyprland/workspaces": {
+	        "active-only": false,
+	        "all-outputs": true,
+	        "disable-scroll": false,
+	        "on-scroll-up": "hyprctl dispatch workspace -1",
+	        "on-scroll-down": "hyprctl dispatch workspace +1",
+			"format": "{icon}",
+			"on-click": "activate",
+			"format-icons": {
+	//			"1": "一",
+	//		<F8><F8><F8><F8>	"2": "二",
+	//			"3": "三",
+	//			"4": "四",
+	//			"5": "五",
+				"urgent": "",
+				"active": "",
+				"default": "",
+		"sort-by-number": true
+	}
+},
+
+	"clock": {
+		"tooltip": false,
+	        "format-alt": "{:%Y-%m-%d}"
+},
+	"backlight": {
+	        "format": "{icon}",
+		"format-alt": "{icon} {percent}%",
+	        "format-icons": ["", "", "", "", "", "", "", "", ""],
+		"tooltip": false
+},
+	"battery": {
+		"interval": 1,
+	        "states": {
+	            "warning": 30,
+	            "critical": 15
+	        },
+	        "format": "{icon}",
+	        "format-charging": "󰉁",
+		"format-charging-alt": "󰉁 {capacity}%",
+	        "format-plugged": "{capacity}%  ",
+	        "format-alt": "{icon} {capacity}%",
+	        "format-icons": [" ", " ", " ", " ", " "],
+		"tooltip": false
+},
+	"network": {
+	        "format-wifi": "{icon}",
+	        "format-ethernet": "{ipaddr}/{cidr} ",
+	        "format-linked": "{ifname} (No IP) ",
+	        "format-disconnected": "Disconnected ⚠",
+	        "format-alt": "{icon} {essid}",
+		"format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+		"tooltip": false
+},
+	"pulseaudio": {
+	        "format": "{icon}",
+		"format-alt": "{icon} {volume}%",
+	        "format-bluetooth": "{icon}",
+	        "format-bluetooth-muted": "{icon}",
+	        "format-muted": "󰖁",
+	        "format-icons": {
+	            "headphone": "",
+	            "hands-free": "󰋎",
+	            "headset": "󰋎",
+	            "phone": "",
+	            "portable": "",
+	            "car": "",
+	            "default": ["󰕿", "󰖀", "󰕾", "󰈸"]
+	        },
+	        "on-click-right": "pavucontrol",
+		"tooltip": false
+},
+	"custom/media": {
+	        "format": "{icon} {}",
+	        "return-type": "json",
+	        "max-length": 40,
+	        "format-icons": {
+	            "spotify": "",
+	            "default": "🎜"
+	        },
+	        "escape": true,
+	        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+		"tooltip": false
+},
+	"custom/playerctl": {
+    		"format": "<span foreground='#ABABAB' font='Ubuntu Nerd Font'>󰎈  </span><span font='Iosevka Nerd Font size=14'>{}</span>",
+        	"interval": 1,
+        	"on-click": "playerctl -p spotify play-pause",
+        	"on-scroll-up": "playerctl -p spotify previous",
+        	"on-scroll-down": "playerctl -p spotify next",
+        	"tooltip": false,
+        	"escape": true,
+        	"max-length": 60,
+        	"exec": "~/.config/waybar/scripts/playerctl.sh"
+},
+	"custom/powermenu": {
+		"format": "󰤄",
+		"on-click": "wlogout"
+},
+	"custom/baraction": {
+		"format": "󰊠",
+		"on-click": "$HOME/.config/waybar/scripts/baraction"
+	}
+}
+
+

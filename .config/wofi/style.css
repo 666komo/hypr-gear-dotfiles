@@ -1,0 +1,79 @@
+window {
+    margin: 5px;
+    border: 0px solid #000000;
+    background-color: rgba(0, 0, 0, 0.0);
+    /* opacity: 1; */
+    font-family: "Iosevka Nerd Font";
+    font-weight: 500;
+    font-size: 14;
+}
+
+@keyframes switch {
+    from {background-color: #1c1c1c;}
+      to {background-color: #414141;}
+}
+
+#input {
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+    border: 2px solid #414141;
+    background-color: #1c1c1c;
+    color : #fff;
+}
+
+#input:focus{
+    border: 2px solid #414141;
+}
+
+#inner-box {
+    max-width: 200px;
+    margin: 0px;
+    border: 0px solid #414141;
+    background-color: #1c1c1c;
+}
+
+#outer-box {
+    margin: 0px;
+    border: 0px solid #999999;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+#entry {
+	margin: 5px;
+	background-color: #1c1c1c;
+	max-width: 325;
+}
+
+#entry:selected {
+  margin: 0;
+  border: none;
+  background-color: #414141;
+  animation-name: switch;
+  animation-duration: 1s;
+}
+
+#scroll {
+    margin: 0px;
+    padding: 10px;
+    border: 2px solid #414141;
+    background-color: #1c1c1c;
+}
+
+#text {
+    margin: 2px;
+    border: 0px solid #000000;
+    color: #FFFFFF;
+}
+
+#text:selected {
+  color: #fff;
+  padding: 9px;
+  margin: 0px 0px;
+  border: none;
+}
+
+
+
+
+
+
