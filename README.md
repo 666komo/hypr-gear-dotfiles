@@ -5,6 +5,8 @@ A collection of dotfiles for Hyprland.
 
 ## Screenshot
 
+![image](https://github.com/666komo/hypr-gear-dotfiles/assets/118112129/0032f692-b8dc-4641-9a3c-2bef780167c2)
+
 <h2> Basic Information </h2>
 
 | OS | Arch Linux |
