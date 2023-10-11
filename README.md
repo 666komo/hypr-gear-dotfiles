@@ -18,5 +18,5 @@ A collection of dotfiles for Hyprland.
 
 ## Installation
 
-To install Hypr MatroGear, simply clone the repository and copy the contents of the .config/hyprland directory to your .config directory.
+To install Hypr MatroGear, simply clone the repository and copy the contents of the cloned repo directory to your home directory.
 </div>
